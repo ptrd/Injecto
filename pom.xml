@@ -53,12 +53,23 @@
             <version>2.4</version>
             <scope>test</scope>
         </dependency>
+	<dependency>
+	    <groupId>org.codehaus.groovy.maven</groupId>
+	    <artifactId>gmaven-plugin</artifactId>
+	    <version>1.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.codehaus.groovy.maven.runtime</groupId>
+	    <artifactId>gmaven-runtime-1.5</artifactId>
+	    <version>1.0</version>
+	</dependency>
     </dependencies>
     <properties>
         <stableVersion>0.6</stableVersion>
         <releaseBase>http://mvn.ldaley.com/release/com/ldaley/injecto</releaseBase>
         <releaseAssembly>dist</releaseAssembly>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <gmaven.runtime>1.5</gmaven.runtime>
     </properties>
     <build>
         <plugins>
@@ -71,9 +82,9 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo.groovy</groupId>
-                <artifactId>groovy-maven-plugin</artifactId>
-                <version>1.0-beta-3</version>
+                <groupId>org.codehaus.groovy.maven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>1.0</version>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
@@ -126,8 +137,9 @@
                 <artifactId>taglist-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo.groovy</groupId>
-                <artifactId>groovy-maven-plugin</artifactId>
+                <groupId>org.codehaus.groovy.maven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+		<version>1.0</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
